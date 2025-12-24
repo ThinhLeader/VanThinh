@@ -674,114 +674,170 @@ nav .icons a {
 }
 
 /* tesst */
-
 @media (max-width: 600px) {
 
-  /* ===== NAV ===== */
-  nav {
-    position: relative;
-    flex-direction: column;
-    align-items: stretch;
-    height: auto;
-    padding: 10px;
-  }
+    /* HEADER + LOGO */
+    header {
+        height: 60px;
+    }
 
-  nav .logo {
-    height: 40px;
-    margin: 0 auto 10px;
-  }
+    .logo {
+        height: 28px !important;
+        width: auto !important;
+        padding: 1%;
+    }
 
-  nav .menu {
-    width: 100%;
-    flex-direction: column;
-    margin: 0;
-    gap: 10px;
-    align-items: center;
-  }
+    /* ===== MENU ===== */
+    .menu {
+        display: flex;
+        gap: 12px;
+    }
 
-  nav .menu li a {
-    font-size: 1.6rem;
-  }
+    .menu > li {
+        position: relative;
+    }
 
-  /* ===== ICON NAV (XẾP DỌC) ===== */
-  nav .icons {
-    width: 100%;
-    display: flex;
-    flex-direction: column;   
-    align-items: center;
-    gap: 12px;
-    margin: 15px 0 0;
-  }
+    .menu > li > a {
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+    }
 
-  nav .icons .find {
-    width: 100%;
-  }
+    /* ẨN CHỮ – CHỈ ICON */
+    .menu > li > a span {
+        display: none;
+    }
 
-  nav .icons .icon1,
-  nav .icons .icon2 {
-    width: 90%;                 
-  }
+    .menu i {
+        font-size: 20px;
+    }
 
-  nav .icons li,
-  nav .icons li a {
-    display: flex;
-    flex-direction: column;    
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-    white-space: nowrap;
-  }
+    /* SUB MENU */
+    .sub-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #111;
+        min-width: 160px;
+        display: none;
+        z-index: 99;
+    }
 
-  /* ===== BANNER ===== */
-  .banners-wrap {
-    height: 300px;
-    width: 100%;
-  }
+    .menu li:hover .sub-menu {
+        display: block;
+    }
 
-  /* ===== ABOUT ===== */
-  .contents {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-  }
+    .sub-menu li a {
+        padding: 10px;
+        font-size: 14px;
+        display: block;
+    }
 
-  .content {
-    width: 100%;
-  }
+    /* ===== ICONS ===== */
+    .icons {
+        display: none !important;
+    }
+    .banners-wrap {
+        height: 300px !important;
+        position: relative;
+        overflow: hidden;
+    }
 
-  .content2 .boxs {
-    flex-direction: column;
-    height: auto;
-    gap:20px;
-  }
+    .banners {
+        height: 100%;
+    }
 
-  .content2 .boxs .box {
-    width: 100%;
-  }
+    .banner-track {
+        height: 100%;
+    }
 
-  /* ===== FORM ===== */
-  .container-form {
-    width: 95%;
-    margin: 0 auto;
-    padding: 5% 3% 10%;
-  }
+    .banner-track img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
 
-  /* ===== FOOTER ===== */
-.row {
-    flex-direction: column;
-    gap: 30px;
-  }
+    /* NÚT PREV / NEXT */
+    .banner-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
 
-  .col {
-    width: 100%;
-    text-align: center;
-  }
+    .banner-btn.prev {
+        left: 8px;
+    }
 
-  .footer h4::before {
+    .banner-btn.next {
+        right: 8px;
+    }
+    /*===================== */
+
+    .contents {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .content,
+    .content2 {
+        width: 100%;
+    }
+
+    .content2 .boxs {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        height: auto;
+    }
+
+    .content2 .boxs .box {
+        width: 100%;
+    }
+     /* ===== FOOTER ===== */
+    .footer .container {
+        max-width: 600px;     
+        margin: 0 auto;        
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
+        gap: 30px;
+    }
+
+    .col {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer h4::before {
     left: 50%;
     transform: translateX(-50%);
+    }
+    .login-box {
+        width: 90%;         
+        max-width: 320px;    
+        padding: 18px;
+  }
+
+    .login-box input {
+        font-size: 1.4rem;
+        padding: 8px;
+  }
+
+    .login-box button {
+        padding: 8px;
+        font-size: 1.4rem;
   }
 }
+
+
+
+
 @media (max-width: 1024px) {
 
   html {
