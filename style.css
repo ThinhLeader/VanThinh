@@ -1,0 +1,869 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+h1,h2,h4,h5,a,i,p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1rem;
+}
+body{
+    background: linear-gradient(90deg, #000000, #1a1a1a);
+}
+/* =============================NAV===================================== */
+nav {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background: #fff;
+    z-index: 100;
+    padding: 0 20px;
+    background-color: rgb(0, 16, 40);
+}
+nav .logo {
+    padding-left: 10px;
+    height: 50px;
+    cursor: pointer;
+}
+
+nav .menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin-left: 100px;
+}
+
+nav .menu li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+nav li{
+    transition: 0.3s ease-in-out;
+}
+nav .icons {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+nav .icons li i {
+    font-size: 2.4rem;
+    color: #fff;
+}
+/* menu con */
+.menu li{
+    position: relative;
+}
+.menu ul.sub-menu{
+    position: absolute;
+    background-color: rgb(0, 16, 40);
+    padding: 20px 0px;
+    list-style: none;
+    width: 170px;
+    display: none;
+    top:15px;
+
+}
+.menu li:hover ul.sub-menu{
+    display: block;
+}
+.menu ul.sub-menu li{
+    padding: 10px;
+}
+.menu ul.sub-menu a{
+    padding: 8px 15px;
+    border-bottom: solid 1px rgb(66, 65, 65);
+}
+.menu ul.sub-menu li:last-child a{
+    border: none;
+}
+.menu>li>a{
+    position: relative;
+}
+.menu>li>a::before{
+    content: "";
+    height: 4px;
+    width: 0;
+    background-color: red;
+    position: absolute;
+    bottom: -5px;
+    transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1) ;
+    left: 0px;
+}
+.menu>li:hover>a::before{
+    display: block;
+    width: 100%;
+}
+.sub-menu li a{
+    position: relative;
+    display: block;
+}
+.sub-menu li a::before{
+    content: "";
+    height: 4px;
+    width: 0;
+    background-color: red;
+    position: absolute;
+    bottom: -5px;
+    transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1) ;
+    left: 0px;
+}
+.sub-menu li:hover a::before{
+    display: block;
+    width: 100%;
+}
+nav .icons .find,
+nav .icons .icon1,
+nav .icons .icon2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    color: #fff;
+}
+
+nav .icons .find {
+    width: 250px;
+}
+
+nav .icons .icon1,
+nav .icons .icon2 {
+    width: 120px;
+}
+
+nav .icons a {
+    display: flex;
+    align-items: center;
+    gap: 10px;      
+    color: inherit; 
+    text-decoration: none;
+}
+.icons li:hover{
+    transform: scale(1.1);
+}
+/*=============================Section-banner=================*/
+.banners-wrap{
+    width: 90%;
+    height: 700px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding-top: 70px;
+    position: relative;
+}
+
+.banners{
+    height: 100%;
+    overflow: hidden;
+}
+
+.banner-track{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    animation: banner-run 20s linear infinite;
+    will-change: transform;
+}
+
+.banner-track img{
+    flex: 0 0 100%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+@keyframes banner-run {
+    0%     { transform: translateX(0%); }
+    22.5%  { transform: translateX(0%); }
+    25%    { transform: translateX(-100%); }
+
+    47.5%  { transform: translateX(-100%); }
+    50%    { transform: translateX(-200%); }
+
+    72.5%  { transform: translateX(-200%); }
+    75%    { transform: translateX(-300%); }
+
+    97.5%  { transform: translateX(-300%); }
+    100%   { transform: translateX(-400%); }
+}
+
+.banner-btn{
+    position: absolute;
+    top:50%;
+    background: gray;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+    opacity: 50%;
+
+}
+.banner-btn i{
+    font-size: 2rem;
+}
+.banner-btn.prev{
+    left: 20px;
+}
+.banner-btn.next{
+    right: 20px;  
+}
+.banner-btn:hover{
+    transform: scale(1.2);
+}
+/*==============================section mat hang================*/
+/*=========================TIÊU ĐỀ============================*/
+.title{
+    padding: 5% 0 2% 0;
+    text-align: center;
+}
+.title h1{
+    font-size: 5rem;
+    color: rgb(255, 255, 255);
+    padding-bottom: 30px;
+}
+
+.title button{
+    font-size: 2rem;
+    border: solid 4px rgb(0, 16, 40);
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    color: rgb(0, 16, 40);
+    transition: 0.3s ease-in-out;
+
+}
+
+.title a{
+    font-size: 2rem;
+    text-decoration: none;
+    color:rgb(0, 16, 40);
+        font-weight: bold;
+}
+
+.title button:hover{
+    background-color: red;
+    transform: scale(1.2);
+}
+.title a:hover{
+    color: white;
+}
+/* ==================MATHANG=================== */
+.cars-warp{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
+    width: 90%;
+    border-radius: 10px;
+}
+
+.car {
+    flex: 1 1 350px;
+    max-width: 400px;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+
+}
+.car .items{
+    position: relative;
+}
+.car img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0 ;
+    display: block;
+}
+.car .items .item{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: red;
+    width: 5rem;
+    height: 5rem;
+    border: solid 2px rgb(0, 16, 40);
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+
+}
+.items .item i{
+    font-size: 3rem;
+    justify-content: center;
+    padding: 12%;
+}
+.car-content h2{
+    font-size: 1.5rem;
+    color:rgb(255, 255, 255) ;
+}
+.car-content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 5%;
+    gap: 10px;
+    background: rgb(0, 16, 40);
+    border-radius: 0 0 10px 10px ;
+}
+.car-content .info{
+    display: flex;
+    justify-content: space-between;
+}
+.car-content .btns{
+    clear: both;
+    text-align: center;
+    padding: 5% 0 5% 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.car-content .btn1,
+.car-content .btn2{
+    font-size: 2rem;
+    border-radius: 10px;
+    padding: 2px;
+    padding: 5px 15px; 
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+/* ===== XE NỔI BẬT ===== */
+.featured {
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.featured-wrap{
+    width: 100%;
+    overflow: hidden;
+}
+.featured-track{
+    display: flex;
+    width: max-content;
+    animation: run 30s linear infinite;
+    will-change: transform;
+}
+.featured-track:hover{
+    animation-play-state: paused;
+}
+
+.featured .featured-car{
+    width: 380px;
+    flex: 0 0 380px; 
+    margin-right: 30px;
+}
+
+@keyframes run{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-50%);
+    }
+}
+
+/*Hieu ung 3 the xe*/
+.car:hover{
+    transform: scale(1.05);
+
+}
+/*hieu ung nut bam*/
+.car-content .btn1:hover,
+.car-content .btn2:hover
+{
+    background-color: red;
+    color: white;
+    transform: scale(1.05);
+}
+/* ==============================content-Về chúng tôi========================== */
+.contents-container{
+    width: 100%;
+    height: auto;
+    padding: 70px 0;
+}
+.contents{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 2%;
+}
+.content{
+    width: 50%;
+}
+.contents .content  p{
+    color: white;
+    font-size: 2rem;
+}
+.banner2-wrap{
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border: solid 2px red;
+}
+.banner2-wrap img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.content2{
+    max-width: 1200px;
+    height: auto;
+    padding: 50px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.content2 .boxs{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 200px;
+    gap: 4%;
+
+}
+.content2 .boxs .box1,
+.content2 .boxs .box2,
+.content2 .boxs .box3,
+.content2 .boxs .box4{
+    width: 100%;
+    height: 100%; 
+    border-radius:10px ;
+    background: rgb(255, 255, 255)
+}
+.boxs .box h4 {
+    padding-top: 30px ;
+}
+.box i{
+    font-size: 4.5rem;
+    border: solid rgb(0, 16, 40);
+    border-radius: 50%;
+    color: rgb(0, 16, 40);
+}
+.box h5{
+    margin-top: 10px;
+    color: rgb(0, 16, 40);
+    font-size: 2rem;
+}
+.box p{
+    margin-top: 20px;
+    color: rgb(0, 16, 40);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* =====================================Sanpham===================== */
+.products{
+    padding-top: 70px;
+}
+.products .cars{ 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 0 10% 10%;
+    row-gap: 40px;
+    column-gap: 5%;
+
+}
+
+/* ==========================Liên hệ=================== */
+/* Căn giữa toàn bộ form */
+.container-form{
+    width: 60%;
+    height: auto;
+    margin: 0 20%;
+    padding: 1% 10% 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-form .forms{
+    width: 100%;
+    display: block;
+}
+/* Tiêu đề form */
+.container-form .infor{
+    text-align: center;      
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: white;
+}
+
+.container-form fieldset{
+    border: solid 2px red;
+    border-radius: 10px;
+    padding: 20px 30px;
+}
+
+.container-form legend{
+    padding: 8px 20px;
+    background: rgb(0, 16, 40);
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 2.1rem;
+}
+
+.container-form fieldset p{
+    margin-bottom: 15px;
+    padding: 1%;
+}
+
+.container-form input{
+    width: 100%;  
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: black;
+    padding: 2%;
+    margin-top: 10px;
+    opacity: 90%;
+}
+.container-form label{
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+.container-form button{
+    font-size: 2rem;
+    padding: 0 20%;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 10px 25%;
+    transition: 0.3s ease-in-out;
+}
+.container-form button p{
+    font-size: 2rem;
+    font-weight: bold;
+    padding-top: 5px;
+    
+}
+.container-form button:hover{
+    background:red;
+    color: white;
+    transform: scale(1.2);
+}
+/* ==============================FOOTER======================== */
+.footer{
+    background-color: rgb(0, 16, 40);
+    padding: 70px 0;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+.footer ul{
+    list-style: none;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.col{
+    width: 30%;
+    padding: 0 15px;
+}
+.footer h4{
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10%;
+    position: relative;
+}
+.footer h4::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    height: 2px;
+    background: red;
+    box-sizing: border-box;
+    width: 140px;
+}
+.footer ul li:not(:last-child){
+    margin-bottom: 10px;
+
+}
+.footer ul li a{
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+.footer ul li a:hover{
+    transform: scale(1.2);
+}
+/* Đăng nhập */
+.login-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.login-box {
+    background: white;
+    padding: 30px;
+    width: 500px;
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+}
+.sigin-box{
+    padding-top: 15px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* tesst */
+
+@media (max-width: 600px) {
+
+  /* ===== NAV ===== */
+  nav {
+    position: relative;
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    padding: 10px;
+  }
+
+  nav .logo {
+    height: 40px;
+    margin: 0 auto 10px;
+  }
+
+  nav .menu {
+    width: 100%;
+    flex-direction: column;
+    margin: 0;
+    gap: 10px;
+    align-items: center;
+  }
+
+  nav .menu li a {
+    font-size: 1.6rem;
+  }
+
+  /* ===== ICON NAV (XẾP DỌC) ===== */
+  nav .icons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;   
+    align-items: center;
+    gap: 12px;
+    margin: 15px 0 0;
+  }
+
+  nav .icons .find {
+    width: 100%;
+  }
+
+  nav .icons .icon1,
+  nav .icons .icon2 {
+    width: 90%;                 
+  }
+
+  nav .icons li,
+  nav .icons li a {
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    white-space: nowrap;
+  }
+
+  /* ===== BANNER ===== */
+  .banners-wrap {
+    height: 300px;
+    width: 100%;
+  }
+
+  /* ===== ABOUT ===== */
+  .contents {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .content2 .boxs {
+    flex-direction: column;
+    height: auto;
+    gap:20px;
+  }
+
+  .content2 .boxs .box {
+    width: 100%;
+  }
+
+  /* ===== FORM ===== */
+  .container-form {
+    width: 95%;
+    margin: 0 auto;
+    padding: 5% 3% 10%;
+  }
+
+  /* ===== FOOTER ===== */
+.row {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .col {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer h4::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 1024px) {
+
+  html {
+    font-size: 58%;
+  }
+
+  /* ===== NAV ===== */
+  nav {
+    padding: 0 20px;
+  }
+
+  nav .menu {
+    gap: 15px;
+    margin-left: 30px;
+  }
+
+  nav .icons .find {
+    width: 180px;
+  }
+
+  /* ===== BANNER ===== */
+  .banners-wrap {
+    height: 480px;
+  }
+
+  /* ===== FEATURED ===== */
+  .featured-track {
+    gap: 20px;
+  }
+
+  .featured .featured-car {
+    width: 320px;
+    flex: 0 0 320px;
+  }
+
+  /* ===== ABOUT ===== */
+  .contents {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .banner2-wrap {
+    width: 80%;
+    height: auto;
+  }
+
+  /* ===== BOX ICON ===== */
+  .content2 .boxs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: auto;
+  }
+
+  .content2 .boxs .box {
+    width: calc(50% - 10px);
+  }
+
+  /* ===== FORM ===== */
+  .container-form {
+    width: 80%;
+    margin: 0 auto;
+    padding: 5% 5% 10%;
+  }
+
+  /* ===== FOOTER ===== */
+  .row {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .col {
+    width: 45%;
+  }
+}
+
+
+    
+
+

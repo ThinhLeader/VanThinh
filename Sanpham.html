@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VanThinh</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/554cd8ac3e.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="img/logo.png" alt="logo" class="logo">
+
+            <ul class="menu">
+                <li><a href="index.html"><i class="fa-regular fa-house"></i> TRANG CHỦ</a></li>
+                <li><a href="Sanpham.html"><i class="fa-solid fa-box"></i> SẢN PHẨM</a>
+                    <ul class="sub-menu">
+                        <li><a href="Sanpham.html?brand=Bugatti">Bugatti</a></li>
+                        <li><a href="Sanpham.html?brand=Ferrari">Ferrari</a></li>
+                        <li><a href="Sanpham.html?brand=Lamborghini">Lamborghini</a></li>
+                    </ul>
+                </li>
+                <li><a href=""><i class="fa-solid fa-taxi"></i> DỊCH VỤ</a>
+                    <ul class="sub-menu">
+                        <li><a href="index.html#forms">Liên hệ</a></li>
+                        <li><a href="index.html#vechungtoi">Về chúng tôi</a></li>
+                    </ul>
+                </li>           
+                <li><a href=""><i class="fa-solid fa-scale-balanced"></i> CHÍNH SÁCH</a></li>
+            </ul>
+
+            <ul class="icons">
+                <li class="find">
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i>Nhập từ khóa để tìm kiếm...</a>
+                </li>
+                <li><a href="#" class="icon1"><i class="fa-solid fa-cart-arrow-down"></i>Giỏ hàng</a></li>
+                <li><a href="#" class="icon2" onclick="openLogin()"><i class="fa-solid fa-user"></i>Đăng nhập</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="products">
+        <div class="title">
+            <h1>SẢN PHẨM</h1>
+        </div>
+        <div class="cars">
+            <div class="car product" data-brand="Lamborghini">
+                <img src="img/xe13.jpg" alt="Card image">
+                <div class="car-content">
+                        <div class="info">
+                            <h2 class="left">Lamborghini Temerario</h2>
+                            <h2 class="right">7999$</h2>
+                        </div>
+                    <div class="btns">
+                        <button class="btn1">Xem chi tiết</button>
+                        <button class="btn2 buy-btn">Mua ngay</button>
+                    </div>
+                </div>
+            </div>
+            <div class="car product" data-brand="Lamborghini">
+                <img src="img/xe12.jpg" alt="Card image">
+                <div class="car-content">
+                        <div class="info">
+                            <h2 class="left">Lamborghini SC18 Alston</h2>
+                            <h2 class="right">8999$</h2>
+                        </div>
+                    <div class="btns">
+                        <button class="btn1">Xem chi tiết</button>
+                        <button class="btn2 buy-btn">Mua ngay</button>
+                    </div>
+                </div>
+            </div>
+            <div class="car product" data-brand="Lamborghini">
+                <img src="img/xe11.jpg" alt="Card image">
+                <div class="car-content">
+                        <div class="info">
+                            <h2 class="left">Lamborghini Aventador</h2>
+                            <h2 class="right">8799$</h2>
+                        </div>
+                    <div class="btns">
+                        <button class="btn1">Xem chi tiết</button>
+                        <button class="btn2 buy-btn">Mua ngay</button>
+                    </div>
+                </div>
+            </div>
+            <div class="car product" data-brand="Bugatti">
+                <img src="img/xe15.jpg" alt="Card image">
+                <div class="car-content">
+                        <div class="info">
+                            <h2 class="left">Bugatti Chiron</h2>
+                            <h2 class="right">5999$</h2>
+                        </div>
+                    <div class="btns">
+                        <button class="btn1">Xem chi tiết</button>
+                        <button class="btn2 buy-btn">Mua ngay</button>
+                    </div>
+                </div>
+            </div>
+            <div class="car product" data-brand="Lamborghini">
+                <img src="img/xe16.jpg" alt="Card image">
+                <div class="car-content">
+                        <div class="info">
+                            <h2 class="left">Lamborghini Húracan</h2>
+                            <h2 class="right">8099$</h2>
+                        </div>
+                    <div class="btns">
+                        <button class="btn1">Xem chi tiết</button>
+                        <button class="btn2 buy-btn">Mua ngay</button>
+                    </div>
+                </div>
+            </div>
+            <div class="car product" data-brand="Ferrari">
+                <img src="img/xe17.jpg" alt="Card image">
+                <div class="car-content">
+                        <div class="info">
+                            <h2 class="left">Ferrari 488 Pista Spider</h2>
+                            <h2 class="right">7999$</h2>
+                        </div>
+                    <div class="btns">
+                        <button class="btn1">Xem chi tiết</button>
+                        <button class="btn2 buy-btn">Mua ngay</button>
+                    </div>
+                </div>
+            </div>
+            <div class="car product" data-brand="Bugatti">
+                <img src="img/xe18.jpg" alt="Card image">
+                <div class="car-content">
+                        <div class="info">
+                            <h2 class="left">Bugatti Veyron</h2>
+                            <h2 class="right">4999$</h2>
+                        </div>
+                    <div class="btns">
+                        <button class="btn1">Xem chi tiết</button>
+                        <button class="btn2 buy-btn">Mua ngay</button>
+                    </div>
+                </div>
+            </div>
+            <div class="car product" data-brand="Lamborghini">
+                <img src="img/xe19.jpg" alt="Card image">
+                <div class="car-content">
+                        <div class="info">
+                            <h2 class="left">Lamborghini Veneno</h2>
+                            <h2 class="right">9999$</h2>
+                        </div>
+                    <div class="btns">
+                        <button class="btn1">Xem chi tiết</button>
+                        <button class="btn2 buy-btn">Mua ngay</button>
+                    </div>
+                </div>
+            </div>
+            <div class="car product" data-brand="Ferrari">
+                <img src="img/xe20.jpg" alt="Card image">
+                <div class="car-content">
+                        <div class="info">
+                            <h2 class="left">Ferrari 488 GTB</h2>
+                            <h2 class="right">5999$</h2>
+                        </div>
+                    <div class="btns">
+                        <button class="btn1">Xem chi tiết</button>
+                        <button class="btn2 buy-btn">Mua ngay</button>
+                    </div>
+                </div>
+            </div>
+            <div class="car product" data-brand="Lamborghini">
+                <img src="img/xe21.jpg" alt="Card image">
+                <div class="car-content">
+                        <div class="info">
+                            <h2 class="left">Lamborghini Urus</h2>
+                            <h2 class="right">8999$</h2>
+                        </div>
+                    <div class="btns">
+                        <button class="btn1">Xem chi tiết</button>
+                        <button class="btn2 buy-btn">Mua ngay</button>
+                    </div>
+                </div>
+            </div>
+            <div class="car product" data-brand="Bugatti">
+                <img src="img/xe22.jpg" alt="Card image">
+                <div class="car-content">
+                        <div class="info">
+                            <h2 class="left">Bugatti Tourbillon</h2>
+                            <h2 class="right">8999$</h2>
+                        </div>
+                    <div class="btns">
+                        <button class="btn1">Xem chi tiết</button>
+                        <button class="btn2 buy-btn">Mua ngay</button>
+                    </div>
+                </div>
+            </div>
+            <div class="car product" data-brand="Ferrari">
+                <img src="img/xe23.jpg" alt="Card image">
+                <div class="car-content">
+                        <div class="info">
+                            <h2 class="left">Ferrari SF90</h2>
+                            <h2 class="right">6999$</h2>
+                        </div>
+                    <div class="btns">
+                        <button class="btn1">Xem chi tiết</button>
+                        <button class="btn2 buy-btn">Mua ngay</button>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h4>Về Chúng Tôi</h4>
+                    <ul>
+                        <li><a href="#">XFORCE &reg;</a></li>
+                        <li><a href="#">Địa Chỉ</a></li>
+                        <li><a href="#">Sinh nhật</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>Tìm Hiểu Thêm</h4>
+                    <ul>
+                        <li><a href="">LAMBORGHINI</a></li>
+                        <li><a href="">BUGATTI</a></li>
+                        <li><a href="">FERRARI</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>Hỗ Trợ Thêm</h4>
+                    <ul>
+                        <li><a href="https://www.facebook.com/le.thinh.294776"><i class="fa-solid fa-hashtag"></i>Facebook</a></li>
+                        <li><a href=""><i class="fa-solid fa-hashtag"></i>HotLine</a></li>
+                        <li><a href=""><i class="fa-solid fa-hashtag"></i>Instargram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+         <div class="login-modal" id="loginModal">
+            <div class="login-box">
+                <span class="close" onclick="closeLogin()">×</span>
+                <h2>Đăng nhập</h2>
+
+                <input type="text" placeholder="Tên đăng nhập">
+                <input type="password" placeholder="Mật khẩu">
+
+                <button>Đăng nhập</button>
+                <div class="sigin-box">
+                    <p>Chưa có tài khoản?<a href="#">Tạo ngay</a></p>
+                </div>
+            </div>
+
+        </div>
+<script src="index.js"></script>
+</body>
+</html>
