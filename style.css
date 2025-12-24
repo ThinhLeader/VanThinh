@@ -15,9 +15,6 @@ p, a {
     font-size: 1.1rem;
 }
 
-body{
-
-}
 /* =============================NAV===================================== */
 nav {
     display: flex;
@@ -31,7 +28,7 @@ nav {
     background-color: rgb(0, 16, 40);
 }
 nav .logo {
-    padding-left: 10px;
+    padding-left: 2%;
     height: 50px;
     cursor: pointer;
 }
@@ -687,18 +684,17 @@ nav .icons a {
     }
 
     .logo {
-        height: 25px !important;
+        height: 30% !important;
         width: auto !important;
-        padding: 1%;
+        padding-left:0.5%;
     }
 
     /* ===== MENU ===== */
     .menu{
         display: flex;
-        gap: 10% !important;
+        gap: 4% !important;
         margin: 0 auto; /* đẩy menu ra giữa */
     }
-
 
     .menu > li {
         position: relative;
@@ -780,6 +776,11 @@ nav .icons a {
 
     .banner-btn.next {
         right: 8px;
+    }
+    /* chinh chu nho lai */
+    .title h1{
+        font-size: 3rem !important;
+        text-align: center;
     }
     /*===================== */
         /* Thu nhỏ section */
