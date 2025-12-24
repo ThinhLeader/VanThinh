@@ -684,16 +684,15 @@ nav .icons a {
     }
 
     .logo {
-        height: 30% !important;
+        height: 25% !important;
         width: auto !important;
-        padding-left:0.5%;
     }
 
     /* ===== MENU ===== */
     .menu{
         display: flex;
-        gap: 4% !important;
-        margin: 0 auto; /* đẩy menu ra giữa */
+        gap: 1px !important;
+        margin: 0 auto;
     }
 
     .menu > li {
@@ -705,7 +704,6 @@ nav .icons a {
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 18px;
     }
 
     /* ẨN CHỮ – CHỈ ICON */
@@ -714,7 +712,7 @@ nav .icons a {
     }
 
     .menu i {
-        font-size: 20px;
+        font-size: 14px;
     }
 
     /* SUB MENU */
@@ -739,8 +737,31 @@ nav .icons a {
     }
 
     /* ===== ICONS ===== */
-    .icons{
-    display: none !important;
+    .icons li a span{
+        display: none;
+    }
+
+    .icons li a{
+        padding: 0;
+        background: none;
+        
+        
+    }
+    nav .icons .find {
+        width: 10px;
+        border: none;
+        padding-left: 10px;
+    }
+
+    nav .icons .icon1,
+    nav .icons .icon2 {
+        width: 10px;
+        border: none;
+    }
+    nav .icons i {
+        font-size: 14px !important;
+        border: none;
+        
     }
 
     .banners-wrap {
@@ -837,6 +858,11 @@ nav .icons a {
     .box p{
         padding: 5%;
     }
+    .container-form {
+        width: 90%;
+        margin: 0 auto;
+        padding: 5% 5% 10%;
+    }
      /* ===== FOOTER ===== */
     .footer .container {
         max-width: 600px;     
@@ -881,86 +907,165 @@ nav .icons a {
 
 
 
-@media (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1023px) {
 
-  html {
-    font-size: 58%;
-  }
+    /* ================== HTML FONT ================== */
+    html {
+        font-size: 60%; /* hơi giảm font để vừa tablet */
+    }
 
-  /* ===== NAV ===== */
-  nav {
-    padding: 0 20px;
-  }
+    /* ================== NAVIGATION ================== */
+    nav {
+        padding: 0 15px;
+        height: 65px;
+    }
 
-  nav .menu {
-    gap: 15px;
-    margin-left: 30px;
-  }
+    nav .logo {
+        height: 40px;
+        padding-left: 1%;
+    }
 
-  nav .icons .find {
-    width: 180px;
-  }
+    nav .menu {
+        gap: 20px;
+        margin-left: 20px;
+    }
+        /* ẨN CHỮ – CHỈ ICON */
+    .menu > li > a span {
+        display: none;
+    }
 
-  /* ===== BANNER ===== */
-  .banners-wrap {
-    height: 480px;
-  }
+    .menu i {
+        font-size: 20px;
+    }
+    nav .icons .find {
+        width: 100px;
+    }
 
-  /* ===== FEATURED ===== */
-  .featured-track {
-    gap: 20px;
-  }
+    nav .icons .icon1,
+    nav .icons .icon2 {
+        width: 70px;
+    }
 
-  .featured .featured-car {
-    width: 320px;
-    flex: 0 0 320px;
-  }
+    nav .icons i {
+        font-size: 2rem;
+    }
 
-  /* ===== ABOUT ===== */
-  .contents {
-    flex-direction: column;
-    text-align: center;
-    gap: 30px;
-  }
+    /* ================== BANNER ================== */
+    .banners-wrap {
+        height: 400px;
+    }
 
-  .content {
-    width: 100%;
-  }
+    .banner-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
 
-  .banner2-wrap {
-    width: 80%;
-    height: auto;
-  }
+    .banner-btn.prev {
+        left: 10px;
+    }
 
-  /* ===== BOX ICON ===== */
-  .content2 .boxs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    height: auto;
-  }
+    .banner-btn.next {
+        right: 10px;
+    }
 
-  .content2 .boxs .box {
-    width: calc(50% - 10px);
-  }
+    /* ================== FEATURED ================== */
+    .featured {
+        padding: 50px 10px;
+    }
 
-  /* ===== FORM ===== */
-  .container-form {
-    width: 80%;
-    margin: 0 auto;
-    padding: 5% 5% 10%;
-  }
+    .featured .featured-car {
+        width: 300px;
+        flex: 0 0 300px;
+        margin-right: 20px;
+    }
 
-  /* ===== FOOTER ===== */
-  .row {
-    flex-wrap: wrap;
-    gap: 30px;
-  }
+    .featured .items img {
+        height: 180px;
+    }
 
-  .col {
-    width: 45%;
-  }
+    .featured .info h2 {
+        font-size: 1.3rem;
+    }
+
+    .featured .btns button {
+        font-size: 1.2rem;
+        padding: 4px 10px;
+    }
+
+    /* ================== TITLE ================== */
+    .title h1 {
+        font-size: 3.5rem;
+        text-align: center;
+    }
+
+    .title button,
+    .title a {
+        font-size: 1.6rem;
+        padding: 8px 15px;
+    }
+
+    /* ================== CONTENT ================== */
+    .contents {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .content,
+    .content2 {
+        width: 100%;
+    }
+
+    .content2 .boxs {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+        height: auto;
+        justify-content: center;
+    }
+
+    .content2 .boxs .box {
+        width: calc(50% - 10px);
+        height: auto;
+    }
+
+    /* ================== FORM ================== */
+    .container-form {
+        width: 70%;
+        margin: 0 auto;
+        padding: 5% 5% 10%;
+    }
+
+    .login-box {
+        width: 90%;
+        max-width: 400px;
+        padding: 20px;
+    }
+
+    .login-box input,
+    .login-box button {
+        font-size: 1.4rem;
+        padding: 8px;
+    }
+
+    /* ================== FOOTER ================== */
+    .row {
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+
+    .col {
+        width: 45%;
+        text-align: center;
+    }
+
+    .footer h4::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
+
 
 
     
