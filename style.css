@@ -639,32 +639,54 @@ nav .icons a {
     align-items: center;
     z-index: 999;
 }
-
+.login-modal img{
+    height: 25px;
+    width: auto;
+    padding: 1%;
+}
 .login-box {
-    background: white;
+    background: linear-gradient(90deg, #000000, #1a1a1a);
     padding: 30px;
     width: 500px;
     border-radius: 12px;
     text-align: center;
     position: relative;
+    border: solid 2px red;
 }
 .sigin-box{
     padding-top: 15px;
 }
-
+.sigin-box p{
+    color: white;
+}
+.sigin-box p a{
+    color: rgb(184, 212, 253);
+    padding-left: 10px;
+}
+.login-box span{
+    color: white;
+}
 .login-box input {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
+    opacity: 70%;
+    border-radius: 10px;
 }
 
 .login-box button {
-    width: 100%;
-    padding: 10px;
-    background: black;
+    width: 50%;
+    padding: 20px 10px 10px;
+    background: rgb(0, 16, 40);
+    font-weight: bold;
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 10px;
+    transition: 0.5s ease-in-out;
+}
+.login-box button:hover{
+    transform: scale(1.2);
 }
 
 .close {
@@ -1054,7 +1076,6 @@ nav .icons a {
         flex-wrap: wrap;
         gap: 25px;
     }
-
     .col {
         width: 45%;
         text-align: center;
